@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuits - LED Resin Cube Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/team-logo.png" alt="Team Logo" class="team-logo">
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="build.html">Build Process</a></li>
+                <li class="nav-item active"><a href="circuits.html">Circuits</a></li>
+                <li class="nav-item"><a href="https://github.com/adegraaf14/capstone" target="_blank">Software <i class="fas fa-external-link-alt"></i></a></li>
+                <li class="nav-item"><a href="team.html">Who We Are</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Circuit Design</h1>
+                <p>Exploring the electronics that power our LED Resin Cube</p>
+            </div>
+        </section>
+
+        <section class="circuits-content">
+            <div class="container">
+                <div class="circuits-intro">
+                    <h2>Electronics Overview</h2>
+                    <p>The LED Resin Cube relies on carefully designed circuitry to control the LED matrix and process input from the IR sensor. Below you'll find detailed information about our circuit designs, component choices, and electronic systems.</p>
+                    <p>Hover over the circuit diagrams and images to see them in greater detail.</p>
+                </div>
+
+                <div class="circuit-grid">
+                    <!-- Circuit Item 1 -->
+                    <div class="circuit-item">
+                        <div class="circuit-image-container">
+                            <img src="images/circuits/schematic-placeholder.jpg" alt="Main Control Board Schematic">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3>Main Control Board</h3>
+                                    <p>Click to view full-size</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circuit-description">
+                            <h3>Main Control Board</h3>
+                            <p>The primary control board houses the microcontroller that serves as the brain of our LED cube. This circuit provides the following functionalities:</p>
+                            <ul>
+                                <li>Power regulation for all system components</li>
+                                <li>LED matrix control via dedicated drivers</li>
+                                <li>IR signal reception and processing</li>
+                                <li>Programming interface for firmware updates</li>
+                            </ul>
+                            <p>The board uses a 32-bit ARM microcontroller running at 120MHz, providing ample processing power for complex LED animations and fast response to IR inputs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Circuit Item 2 -->
+                    <div class="circuit-item">
+                        <div class="circuit-image-container">
+                            <img src="images/circuits/led-matrix-placeholder.jpg" alt="LED Matrix Circuit">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3>LED Matrix Design</h3>
+                                    <p>Click to view full-size</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circuit-description">
+                            <h3>LED Matrix Design</h3>
+                            <p>The 3D LED matrix forms the visual heart of our project. Each LED is individually addressable, allowing for complex 3D animations and patterns.</p>
+                            <ul>
+                                <li>5x5x5 grid configuration (125 LEDs total)</li>
+                                <li>WS2812B individually addressable RGB LEDs</li>
+                                <li>Serial data connection with optimized signal routing</li>
+                                <li>Carefully designed power distribution to prevent voltage drop</li>
+                            </ul>
+                            <p>The matrix design presented significant challenges in signal integrity and power distribution due to the 3D arrangement in resin. We developed a custom routing solution to ensure reliable data transmission to each LED.</p>
+                        </div>
+                    </div>
+
+                    <!-- Circuit Item 3 -->
+                    <div class="circuit-item">
+                        <div class="circuit-image-container">
+                            <img src="images/circuits/ir-sensor-placeholder.jpg" alt="IR Sensor Circuit">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3>IR Sensor System</h3>
+                                    <p>Click to view full-size</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circuit-description">
+                            <h3>IR Sensor System</h3>
+                            <p>The IR sensor system detects and interprets signals from the IR wand controller. This sub-circuit includes:</p>
+                            <ul>
+                                <li>TSOP38238 IR receiver with built-in filtering</li>
+                                <li>Signal conditioning circuitry for noise rejection</li>
+                                <li>Digital interface to the main microcontroller</li>
+                                <li>38kHz carrier frequency detection</li>
+                            </ul>
+                            <p>The sensor has a 120-degree detection angle, allowing for interaction with the cube from various positions. Signal processing algorithms in the microcontroller interpret different movement patterns from the IR wand.</p>
+                        </div>
+                    </div>
+
+                    <!-- Circuit Item 4 -->
+                    <div class="circuit-item">
+                        <div class="circuit-image-container">
+                            <img src="images/circuits/power-supply-placeholder.jpg" alt="Power Supply Circuit">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3>Power Supply System</h3>
+                                    <p>Click to view full-size</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circuit-description">
+                            <h3>Power Supply System</h3>
+                            <p>Reliable power is critical for our LED cube to function properly. Our power supply system incorporates:</p>
+                            <ul>
+                                <li>5V/3A main power supply for LEDs</li>
+                                <li>3.3V regulated supply for logic circuits</li>
+                                <li>Power filtering and protection circuitry</li>
+                                <li>Capacitive buffering for LED current spikes</li>
+                            </ul>
+                            <p>The power system is designed to handle the varying current demands of the LED matrix during different animation patterns. High-capacity filter capacitors ensure stable operation even when all LEDs are at maximum brightness.</p>
+                        </div>
+                    </div>
+
+                    <!-- Circuit Item 5 -->
+                    <div class="circuit-item">
+                        <div class="circuit-image-container">
+                            <img src="images/circuits/wand-placeholder.jpg" alt="IR Wand Controller">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3>IR Wand Controller</h3>
+                                    <p>Click to view full-size</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circuit-description">
+                            <h3>IR Wand Controller</h3>
+                            <p>The IR wand controller is the user interface for our LED cube. This compact circuit includes:</p>
+                            <ul>
+                                <li>ATtiny85 microcontroller for command generation</li>
+                                <li>IR LED with driver circuit</li>
+                                <li>Motion detection via ADXL345 accelerometer</li>
+                                <li>Button inputs for mode selection</li>
+                                <li>Battery power system with power management</li>
+                            </ul>
+                            <p>The wand translates physical movements and button presses into IR command signals that are sent to the cube. Different gestures trigger different light patterns and effects in the LED matrix.</p>
+                        </div>
+                    </div>
+
+                    <!-- Add more circuit items as needed by copying the structure above -->
+                </div>
+
+                <div class="component-list">
+                    <h2>Key Components</h2>
+                    <div class="component-table-container">
+                        <table class="component-table">
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Specifications</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Microcontroller</td>
+                                    <td>ARM Cortex-M4, 120MHz, 256KB Flash</td>
+                                    <td>Main control system, LED pattern generation, IR signal processing</td>
+                                </tr>
+                                <tr>
+                                    <td>WS2812B LEDs</td>
+                                    <td>5x5x5 Matrix, 5V operation, 60mA max per LED</td>
+                                    <td>Visual display elements, individually addressable RGB lights</td>
+                                </tr>
+                                <tr>
+                                    <td>TSOP38238</td>
+                                    <td>38kHz IR receiver, 45m range</td>
+                                    <td>Detects and demodulates IR signals from the wand controller</td>
+                                </tr>
+                                <tr>
+                                    <td>ATtiny85</td>
+                                    <td>8MHz, 8KB Flash, 512B RAM</td>
+                                    <td>Controls the IR wand, processes accelerometer data</td>
+                                </tr>
+                                <tr>
+                                    <td>ADXL345</td>
+                                    <td>3-axis accelerometer, ±16g range</td>
+                                    <td>Motion detection for the IR wand controller</td>
+                                </tr>
+                                <tr>
+                                    <td>Power Regulator</td>
+                                    <td>5V to 3.3V buck converter, 1A output</td>
+                                    <td>Provides stable power for logic circuits</td>
+                                </tr>
+                                <tr>
+                                    <td>Capacitors</td>
+                                    <td>1000μF, 10V electrolytic, various ceramics</td>
+                                    <td>Power filtering and stabilization for LEDs</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Parker Ackerknecht:</p>
+                    <p>Alec de Graaf: adegraaf14@gmail.com</p>
+                    <p>Prakash Gurung: </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
