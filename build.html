@@ -52,56 +52,51 @@
                     <h2>Step 1: Initial Design</h2>
                     <div class="build-images">
                         <div class="image-container">
-                            <img src="images/build/placeholder-1.jpg" alt="Initial Design Sketch">
+                            <img src="images/initial_outline.png" alt="Initial Design Sketch">
                             <p class="image-caption">Initial design sketch of the cube structure</p>
-                        </div>
-                        <!-- You can add more images in this section by copying this div -->
-                        <div class="image-container">
-                            <img src="images/build/placeholder-2.jpg" alt="3D Model">
-                            <p class="image-caption">3D modeling of the cube in CAD software</p>
                         </div>
                     </div>
                     <div class="step-description">
-                        <p>The first step in our process was creating detailed designs for the cube structure. We started with hand sketches to explore different form factors and configurations of LEDs within the resin medium. After several iterations, we settled on a 10cm cube design with a 5x5x5 grid of individually addressable RGB LEDs.</p>
-                        <p>We then moved to 3D modeling software to create precise technical drawings that would guide our physical build. This stage was crucial for determining the exact positioning of electronic components and planning the resin casting process.</p>
+                        <p>The first step in the build process was to decide the components in the receiver and wand as well as how they would communicate. Our requirements called for the receiver to be encased in resin and for LEDs to light up in response to different predefined user gestures.</p>
+                        <p>We decided upon using a Raspberry Pi 4b as the processing unit. This was determined to be necessary over other microcontrollers such as ESP32s because of the processing power required for gesture/image recognition software that we planned to use, as well as its ability to easily interface with high-resolution cameras. The wand was determined to emit an IR signal for tracking by the camera in the receiver as well as include an inertial measurement unit for more complex gestures. Wireless charging for the receiver was chosen to prevent the need for cables poking out of the cube.</p>
                     </div>
                 </div>
 
                 <!-- STEP 2 -->
                 <div class="build-step">
-                    <h2>Step 2: Electronics Assembly</h2>
+                    <h2>Step 2: Initial Electronics Testing</h2>
                     <div class="build-images">
                         <div class="image-container">
-                            <img src="images/build/placeholder-3.jpg" alt="PCB Preparation">
-                            <p class="image-caption">Preparing the custom PCB for assembly</p>
+                            <img src="images/camera_wand1.jpg" alt="camera & wand">
+                            <p class="image-caption"></p>
                         </div>
                         <div class="image-container">
-                            <img src="images/build/placeholder-4.jpg" alt="LED Arrangement">
-                            <p class="image-caption">Arranging the LED matrix configuration</p>
+                            <img src="images/ir_trace1.png" alt="IR Trace">
+                            <p class="image-caption">/p>
                         </div>
                     </div>
                     <div class="step-description">
-                        <p>Once our design was finalized, we began the electronics assembly phase. This started with fabricating our custom PCB that would serve as the control center for the LED array. We carefully soldered the microcontroller, power regulators, and IR receiver components to the board.</p>
-                        <p>The most challenging part was creating the 3D LED matrix. Each LED needed to be precisely positioned to create the desired visual effect when illuminated. We used thin gauge wire to connect the LEDs in series, ensuring that each could be individually controlled by the microcontroller.</p>
+                        <p>The first IR test was done with the camera and an IR filter in front of it. The IR LED is attached to a battery pack, forming our first prototype wand. The LED is clearly visible and software was written to trace the path of the wand, which can be seen here. Eventually we would use this basic tracing function to be able to recognize different gestures made by the user. </p>
+                        <p>The most challenging part of this was ensuring that the camera remained solely focused on the IR LED and would not attempt to track other features in the environment. Although we have mostly been able to mitigate this as an issue, it can sometimes occur under unique lighting circumstances.</p>
                     </div>
                 </div>
 
                 <!-- STEP 3 -->
                 <div class="build-step">
-                    <h2>Step 3: Resin Casting</h2>
+                    <h2>Step 3: Initial Resin Testing</h2>
                     <div class="build-images">
                         <div class="image-container">
-                            <img src="images/build/placeholder-5.jpg" alt="Mold Preparation">
-                            <p class="image-caption">Preparing the silicone mold for resin casting</p>
+                            <img src="images/resistors-resin.jpg" alt="Resin Resistors">
+                            <p class="image-caption"></p>
                         </div>
                         <div class="image-container">
-                            <img src="images/build/placeholder-6.jpg" alt="Resin Pouring">
-                            <p class="image-caption">Carefully pouring the resin in layers</p>
+                            <img src="images/led-resin.jpg" alt="Resin LEDs">
+                            <p class="image-caption"></p>
                         </div>
                     </div>
                     <div class="step-description">
-                        <p>The resin casting process required careful planning and execution. We created a custom silicone mold to achieve the perfect cube shape. The process involved pouring the resin in multiple layers to properly suspend the LED matrix in the center of the cube.</p>
-                        <p>Each layer needed to cure for 24 hours before the next could be added. We had to be extremely careful not to disturb the LED positioning during this process. After the final pour, the complete cube needed to cure for an additional 72 hours before it could be removed from the mold and finished.</p>
+                        <p>In the initial design and testing phase, the team was worried about how heat dissapation would be affected by the electronics being embedded in resin. In order to determine the thermal properties of the resin, we tested the power limits of it. Using a 1Ω equivalent ciruit, the resin ended up cracking at 15W of power. This set the upper threshold for power consumption of our system to build around.</p>
+                        <p>All components that would be placed in the resin cube were individually tested in resin before the first prototype cube was assembled. The LED strip seen above was one of the components. Although we assumed certain components such as the LEDs would behave normally, we wanted to eliminate risks that would otherwise be hard to find when the entire system was assembled. </p>
                     </div>
                 </div>
 
