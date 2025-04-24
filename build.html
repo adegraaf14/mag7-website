@@ -38,16 +38,33 @@
             </div>
         </section>
 
+        <div class="documents-section">
+            <h2>Project Documentation</h2>
+            <p>Access our detailed project documentation below:</p>
+            <div class="document-links">
+                <a href="https://docs.google.com/document/d/15tc992KmL8mE_gztYkN6yCvlilkXFIbBv29JSdnOCbE/edit?tab=t.0#heading=h.85pe2h22jumt" class="document-link">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Product Development Document</span>
+                </a>
+                <a href="https://docs.google.com/presentation/d/1o_-t9U5kUkcrHBlC0YdrGBjdX8p1VoQbiXxNssHvNK4/edit#slide=id.p1" class="document-link">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Critical Design Review</span>
+                </a>
+                <a href="#" class="document-link">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Final Project Report</span>
+                </a>
+            </div>
+        </div>
+
         <section class="build-content">
             <div class="container">
-                <!-- Process Overview -->
+
                 <div class="process-overview">
                     <h2>The Development Journey</h2>
                     <p>Our LED Resin Cube went through several phases of development, from initial concept sketches to the final product. Below you'll find documentation of each major step in our build process.</p>
                 </div>
 
-                <!-- Build Steps - Template for copy/paste -->
-                <!-- STEP 1 -->
                 <div class="build-step">
                     <h2>Step 1: Initial Design</h2>
                     <div class="build-images">
@@ -62,7 +79,6 @@
                     </div>
                 </div>
 
-                <!-- STEP 2 -->
                 <div class="build-step">
                     <h2>Step 2: Initial Electronics Testing</h2>
                     <div class="build-images">
@@ -72,7 +88,7 @@
                         </div>
                         <div class="image-container">
                             <img src="images/ir_trace1.png" alt="IR Trace">
-                            <p class="image-caption">/p>
+                            <p class="image-caption"></p>
                         </div>
                     </div>
                     <div class="step-description">
@@ -81,7 +97,7 @@
                     </div>
                 </div>
 
-                <!-- STEP 3 -->
+
                 <div class="build-step">
                     <h2>Step 3: Initial Resin Testing</h2>
                     <div class="build-images">
@@ -100,62 +116,94 @@
                     </div>
                 </div>
 
-                <!-- STEP 4 -->
+
                 <div class="build-step">
-                    <h2>Step 4: Programming and Testing</h2>
+                    <h2>Step 4: First Resin Cubes</h2>
                     <div class="build-images">
                         <div class="image-container">
-                            <img src="images/build/placeholder-7.jpg" alt="Software Development">
-                            <p class="image-caption">Developing the control software</p>
+                            <img src="images/IMG_6108.jpg" alt="Software Development">
+                            <p class="image-caption">First cube</p>
                         </div>
                         <div class="image-container">
-                            <img src="images/build/placeholder-8.jpg" alt="Testing">
-                            <p class="image-caption">Testing LED patterns and IR responsiveness</p>
+                            <img src="images/mold_side.jpg" alt="Testing">
+                            <p class="image-caption">Molds</p>
                         </div>
                     </div>
                     <div class="step-description">
-                        <p>With the physical cube completed, we moved on to programming the microcontroller to create various lighting patterns and respond to IR input. We developed several animation algorithms that would create visually striking patterns within the 3D LED matrix.</p>
-                        <p>The IR wand controller required its own programming for sending commands to the cube. We implemented different gesture recognition patterns that would trigger specific light animations when detected by the IR receiver.</p>
+                        <p>The first resin cube can be seen on the left. It was set in a 3D printed box as its mold and have few functional components. The main goal of this cube was to analyze the full setting process as well as peak temperature during the set. The ratio of epoxy resin to the hardening agent is crucial. We had not measured them precisely enough, resulting in the resin taking multiple days to fully set and a sticky texture on the outside.</p>
+                        <p>The cube's maximum temperature was 70°C and was affected by the amount of resin setting at a given time. Additionally, the 3D printed cube was not an optimal mold as the cube was extremely difficult to remove. As a result, we began to create our own silicone molds that could be shaped to specific sizes and were far easier to remove the cubes from. One of the molds can be seen on the right. </p>
                     </div>
                 </div>
 
-                <!-- COPY THIS TEMPLATE TO ADD MORE STEPS -->
-                <!-- 
                 <div class="build-step">
-                    <h2>Step X: Title</h2>
+                    <h2>Step 5: Resin Cube Iterations</h2>
                     <div class="build-images">
                         <div class="image-container">
-                            <img src="images/build/your-image-1.jpg" alt="Description">
-                            <p class="image-caption">Caption for image 1</p>
+                            <img src="images/cube1.jpg" alt="Software Development">
+                            <p class="image-caption">First cube</p>
                         </div>
                         <div class="image-container">
-                            <img src="images/build/your-image-2.jpg" alt="Description">
-                            <p class="image-caption">Caption for image 2</p>
+                            <img src="images/stand.jpg" alt="Testing">
+                            <p class="image-caption">Molds</p>
                         </div>
                     </div>
                     <div class="step-description">
-                        <p>First paragraph describing this build step...</p>
-                        <p>Second paragraph with more details...</p>
+                        <p>The second resin cube developed can be seen on the left. It included a functional Raspberry Pi 4b and LED PCB on the front side. The Raspberry Pi and LEDs were able to light up through an external power from outside the cube. However, the elements in the cube would shift while it was setting, resulting in a messy look inside of the resin. The resin was also not as clear as we wanted it to be.</p>
+                        <p>We preformed multiple tests to determine the cause of the resin not setting in a clear manner and concluded that it was due to air bubbles appearing when it was stirred too quickly. Additionally, a 3D printed stand was printed for the components to rest on so that they do not move when the resin is being set. The first stand prototype can be see on the right.</p>
                     </div>
                 </div>
-                -->
-                
-                <!-- Final Results -->
+
+                <div class="build-step">
+                    <h2>Step 6: Refinement</h2>
+                    <div class="build-images">
+                        <div class="image-container">
+                            <img src="images/cube2.jpg" alt="Software Development">
+                            <p class="image-caption">cube 2</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/cube3.jpg" alt="Testing">
+                            <p class="image-caption">final cube</p>
+                        </div>
+                    </div>
+                    <div class="step-description">
+                        <p>The cube seen on the left was the next iteration of the cube that included significant improvements. The battery and charging system worked inside the cube and the Raspberry Pi's camera was fully functional, albeit slightly distorted.</p>
+                        <p>The cube on the right is considered out minimum viable product. The resin has been properly set and the electronics are fully functional. Although the cube works, the gesture recognition was not fully accurate due to the positioning of the camera being slightly further back in the cube and some air bubbles in front of it distorting the tracking capabilities. </p>
+                    </div>
+                </div>
+
+                <div class="build-step">
+                    <h2>Step 7: Wand Development</h2>
+                    <div class="build-images">
+                        <div class="image-container">
+                            <img src="images/wands-resin.jpg" alt="Software Development">
+                            <p class="image-caption">cube 2</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/wandtip1.jpg" alt="Testing">
+                            <p class="image-caption">final cube</p>
+                        </div>
+                    </div>
+                    <div class="step-description">
+                        <p>The wand was more difficult to develop than we had initially imagined it to be. The circuit is simple, with only a battery, a button to turn it on, and an IR LED. The team first considered making it out of resin, like the cube, but encountered difficulties with this approach.</p>
+                        <p>By encasing it in resin, it was difficult to get the components set correctly and made switching the battery in it difficult. The button also frequently got stuck, rendering it unusable. The team switched to 3D printed cases for the wands, with the electronics mounted inside. This proved more reliable and easier to produce, making it the optimal solution for us.</p>
+                    </div>
+                </div>
+
                 <div class="build-step final-result">
                     <h2>Final Result</h2>
                     <div class="build-images">
                         <div class="image-container">
-                            <img src="images/build/placeholder-9.jpg" alt="Completed Cube">
+                            <img src="images/working_cube.jpg" alt="Completed Cube">
                             <p class="image-caption">The completed LED Resin Cube</p>
                         </div>
                         <div class="image-container">
-                            <img src="images/build/placeholder-10.jpg" alt="Cube in Action">
+                            <img src="images/wand_final.jpg" alt="Cube in Action">
                             <p class="image-caption">The cube displaying a light pattern</p>
                         </div>
                     </div>
                     <div class="step-description">
-                        <p>After weeks of development, design iterations, and careful assembly, our LED Resin Cube was finally complete. The finished product features a crystal-clear resin body that perfectly showcases the 3D matrix of LEDs inside.</p>
-                        <p>The cube responds instantly to IR wand gestures, creating dynamic lighting patterns that can be controlled by the user. We're extremely proud of the final result and the technical challenges we overcame during the build process.</p>
+                        <p>After seven months of development, the system was complete and working. The cube is powered by a rechargable battery by the wireless charging coil in the base of the cube. The orange base is the other part of the wireless charger that the cube sits on to charge. An HDMI port is available on the top of the cube, although it is not needed for operation. An LED indicator on the side of the cube displays the charge level. The Raspberry Pi boots on startup and begins running the software for the wand to communicate with. The vibrant 10x10 smart LED display on the front shows different preprogrammed patterns when the user connects performs a gesture with the wand correctly. The wand has a removable base to switch the battery from and a red LED that turns on with the IR LED when the button is pressed, allowing the user to know if the battery is dead and when the wand is turned on. </p>
+                        <p>Overall, we are extremely satisfied with the final result and proud of the obstacles that we overcame to get here. The biggest challenges that the team overcame throughout the development process were overheating issues from the resin, difficulties implementing the IR gesture recognition software, and distortions to the camera due to small air bubbles in front of it in the resin. Major takeaways that we learned include the importance of software testing and individual component tests. Users familiar with how our software worked understood how to correctly use the wand with it, but new users often struggled and were able to help use spot blindspots in our code that we would not have otherwise noticed. Additionally, the irreversability of resin setting meant that it was extremely important to test the individual components in them before putting the full hardware package in resin. Finally, some future improvements that we would make include changing the IR to be pulse width modulated, so that software only tracks its specific frequency. We would also increase the amount of features we have for user feedback such as adding an audio response and showing the user's motion on the LED array.</p>
                     </div>
                 </div>
             </div>

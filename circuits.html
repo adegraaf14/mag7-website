@@ -13,7 +13,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/team-logo.png" alt="Team Logo" class="team-logo">
+                    <img src="images/mag7-logo.png" alt="Team Logo" class="team-logo">
                 </a>
             </div>
             <div class="nav-toggle">
@@ -42,80 +42,58 @@
             <div class="container">
                 <div class="circuits-intro">
                     <h2>Electronics Overview</h2>
-                    <p>The LED Resin Cube relies on carefully designed circuitry to control the LED matrix and process input from the IR sensor. Below you'll find detailed information about our circuit designs, component choices, and electronic systems.</p>
-                    <p>Hover over the circuit diagrams and images to see them in greater detail.</p>
+                    <p>The resin block relies on a Raspberry Pi 4b to interpret IR signals and control the smart LEDs. A Raspberry Pi High Quality Camera module is used to look at the IR signal from the wand. It has native support from the Raspberry Pi and is capable of detecting IR light. A custom PCB was designed to hold and power the 100 smart LEDs. The circuit is powered by a 5000mAh rechargable battery wirelessly charged. A custom LED charge level indicator is also included to display the battery charge.</p>
                 </div>
 
                 <div class="circuit-grid">
                     <!-- Circuit Item 1 -->
                     <div class="circuit-item">
                         <div class="circuit-image-container">
-                            <img src="images/circuits/schematic-placeholder.jpg" alt="Main Control Board Schematic">
+                            <img src="images/pi-board-cam.jpg" alt="Main Control Board Schematic">
                             <div class="overlay">
                                 <div class="overlay-content">
-                                    <h3>Main Control Board</h3>
-                                    <p>Click to view full-size</p>
+                                    <h3>Raspberry Pi, Camera, and LED PCB</h3>
                                 </div>
                             </div>
                         </div>
                         <div class="circuit-description">
-                            <h3>Main Control Board</h3>
-                            <p>The primary control board houses the microcontroller that serves as the brain of our LED cube. This circuit provides the following functionalities:</p>
-                            <ul>
-                                <li>Power regulation for all system components</li>
-                                <li>LED matrix control via dedicated drivers</li>
-                                <li>IR signal reception and processing</li>
-                                <li>Programming interface for firmware updates</li>
-                            </ul>
-                            <p>The board uses a 32-bit ARM microcontroller running at 120MHz, providing ample processing power for complex LED animations and fast response to IR inputs.</p>
+                            <h3>Raspberry Pi, Camera, and LED PCB</h3>
+                            <p>The Raspberry Pi can be seen here connected to the camera and the LED PCB. The LEDs are controlled by the 5V & Ground Pins on the Pi, and data is provided to them through a GPIO pin. </p>
+                            <p>The Raspberry Pi's ARM Cortex A-72 processor is sufficient for the computer vision algorithms running. The camera is high enough resolution for proper tracking and is connected to the Pi with a ribbon cable. The Pi is able to be communicated with via SSH, even when it is in the resin. Shell scripting in the Pi ensures that the program runs on startup without external user assistance.</p>
                         </div>
                     </div>
 
-                    <!-- Circuit Item 2 -->
                     <div class="circuit-item">
                         <div class="circuit-image-container">
-                            <img src="images/circuits/led-matrix-placeholder.jpg" alt="LED Matrix Circuit">
+                            <img src="images/ledpcb.png" alt="LED Matrix Circuit">
                             <div class="overlay">
                                 <div class="overlay-content">
-                                    <h3>LED Matrix Design</h3>
+                                    <h3>LED Matrix</h3>
                                     <p>Click to view full-size</p>
                                 </div>
                             </div>
                         </div>
                         <div class="circuit-description">
-                            <h3>LED Matrix Design</h3>
-                            <p>The 3D LED matrix forms the visual heart of our project. Each LED is individually addressable, allowing for complex 3D animations and patterns.</p>
-                            <ul>
-                                <li>5x5x5 grid configuration (125 LEDs total)</li>
-                                <li>WS2812B individually addressable RGB LEDs</li>
-                                <li>Serial data connection with optimized signal routing</li>
-                                <li>Carefully designed power distribution to prevent voltage drop</li>
-                            </ul>
-                            <p>The matrix design presented significant challenges in signal integrity and power distribution due to the 3D arrangement in resin. We developed a custom routing solution to ensure reliable data transmission to each LED.</p>
+                            <h3>LED Matrix</h3>
+                            <p>The LED matrix provides the visual feedback for the project. The original design was a 6x6 matrix, however our power budget allowed for the increase to 10x10.</p>
+                            <p>Size and spacing were a challenge with this circuit due to the amount of LEDs required. The middle was left empty to allow for a hole through the PCB. The IR camera is positioned behind it and looks through the hole. This allows us to reduce the size of the cube and dedicates more space on the front to be taken up by the LEDs. Capacitors were added for each LED to ensure signal integrity.</p>
                         </div>
                     </div>
 
-                    <!-- Circuit Item 3 -->
                     <div class="circuit-item">
                         <div class="circuit-image-container">
                             <img src="images/circuits/ir-sensor-placeholder.jpg" alt="IR Sensor Circuit">
                             <div class="overlay">
                                 <div class="overlay-content">
-                                    <h3>IR Sensor System</h3>
+                                    <h3>Power System</h3>
                                     <p>Click to view full-size</p>
                                 </div>
                             </div>
                         </div>
                         <div class="circuit-description">
-                            <h3>IR Sensor System</h3>
-                            <p>The IR sensor system detects and interprets signals from the IR wand controller. This sub-circuit includes:</p>
-                            <ul>
-                                <li>TSOP38238 IR receiver with built-in filtering</li>
-                                <li>Signal conditioning circuitry for noise rejection</li>
-                                <li>Digital interface to the main microcontroller</li>
-                                <li>38kHz carrier frequency detection</li>
-                            </ul>
-                            <p>The sensor has a 120-degree detection angle, allowing for interaction with the cube from various positions. Signal processing algorithms in the microcontroller interpret different movement patterns from the IR wand.</p>
+                            <h3>Power System</h3>
+                            <p>The power system is made up </p>
+                            <p></p>
                         </div>
                     </div>
 
@@ -246,6 +224,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

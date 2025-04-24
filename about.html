@@ -29,54 +29,74 @@
             </ul>
         </nav>
     </header>
-
-    <main>
         <section class="page-header">
             <div class="container">
-                <h1>About the Project</h1>
+                <h1>About</h1>
+                <p>Learn about the Wizardly Wand Project</p>
             </div>
         </section>
 
+        <!-- Update the about-content section -->
         <section class="about-content">
             <div class="container">
-                <div class="about-description">
-                    <h2>Project Overview</h2>
-                    <p>The LED Resin Cube is a capstone engineering project that combines electronics, programming, and materials science to create an interactive light display. The cube features embedded LEDs within a clear resin structure that respond dynamically to user input via an IR wand controller.</p>
-                    
-                    <p>This project demonstrates the practical application of concepts from circuit design, microcontroller programming, sensor integration, and material properties of resins and LEDs.</p>
+                <div class="about-container">
+                    <div class="about-text">
+                        <h2>Project Overview</h2>
+                        <p>The Wizardly Wand capstone project is combined of a receiving unit embedded in resin and a transmitting wand used to control it. The project is designed to be a technology demonstrator to inspire the next generation of electrical engineers.</p>
+                        
+                        <p>It is designed to be a portable system with up to 3 hours of battery life that responds to predefined gestures that the user can make with the wand. This project demonstrates the practical application of concepts from circuit design, microcontroller programming, sensor integration, and material properties of resins and LEDs.</p>
 
-                    <h2>Key Features</h2>
-                    <div class="features-grid">
-                        <div class="feature-item">
-                            <i class="fas fa-cube"></i>
-                            <h3>Interactive Design</h3>
-                            <p>The cube responds in real-time to user movements and commands from the IR wand.</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <h3>Dynamic Lighting</h3>
-                            <p>Multiple LED patterns and animations create stunning visual displays.</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <h3>Custom Circuitry</h3>
-                            <p>Carefully designed PCB ensures reliable performance in a compact form factor.</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-code"></i>
-                            <h3>Advanced Programming</h3>
-                            <p>Efficient code handles input processing and controls complex lighting patterns.</p>
+                        <h2>Key Features</h2>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cube"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Interactive Design</h3>
+                                    <p>The cube responds in real-time to user movements and commands from the IR wand.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Dynamic Lighting</h3>
+                                    <p>Multiple LED patterns and animations create stunning visual displays.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Custom Circuitry</h3>
+                                    <p>Carefully designed PCB ensures reliable performance in a compact form factor.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Advanced Programming</h3>
+                                    <p>Efficient code handles input processing and controls complex lighting patterns.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
+                    
+                    <div class="about-image">
+                        <img src="images/working_cube.jpg" alt="LED Resin Cube in action">
+                    </div>
+                </div>
+                
+                <!-- Rest of the content -->
+                <div class="full-width-section">
                     <h2>Project Goals</h2>
-                    <p>This project was developed with the following goals in mind:</p>
                     <ul class="goals-list">
-                        <li>Create an engaging interactive experience through LED lighting patterns</li>
-                        <li>Demonstrate practical integration of electronics within a resin medium</li>
-                        <li>Develop a custom controller system using IR technology</li>
-                        <li>Implement efficient programming to create responsive interactions</li>
-                        <li>Design a visually appealing product with practical applications</li>
+                        <p>The project was conceived by Profesor Bogatin that would be displayed at the Electrical Engineering front desk and brought to lectures to inspire new engineers to pursue electrical engineering. Professor Bogatin wanted it to be an engaging interactive experience through user inputs and responses. It was envisioned to be cast in resin so that the electronics would be visible to onlookers without a risk of damage. The product was designed to have a "wow" factor while remaining functional and practical. The implementation and design of much of the product was left to the team, with few engineering requirements other than resin and portability.</p>
                     </ul>
                     
                     <h2>Technologies Used</h2>
@@ -84,20 +104,20 @@
                         <div class="tech-item">
                             <h3>Hardware</h3>
                             <ul>
-                                <li>Addressable RGB LEDs</li>
-                                <li>Custom PCB Design</li>
+                                <li>Raspberry Pi 4b</li>
+                                <li>Custom LED PCB Design</li>
+                                <li>Custom Charging Circuit PCB Design</li>
                                 <li>IR Sensors and Emitters</li>
-                                <li>Microcontroller</li>
-                                <li>Clear Casting Resin</li>
+                                <li>Clear Casting Epoxy Resin</li>
                             </ul>
                         </div>
                         <div class="tech-item">
                             <h3>Software</h3>
                             <ul>
-                                <li>C/C++ Programming</li>
-                                <li>LED Animation Libraries</li>
-                                <li>IR Communication Protocols</li>
-                                <li>PCB Design Software</li>
+                                <li>Python</li>
+                                <li>Open Computer Vision Libraries</li>
+                                <li>Onshape CAD</li>
+                                <li>Bash</li>
                             </ul>
                         </div>
                     </div>

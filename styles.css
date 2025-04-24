@@ -34,8 +34,8 @@
 }
 
 .member-image {
-    height: 100%;
-    overflow: hidden;
+    width: 100%;
+    overflow:hidden;
 }
 
 .member-image img {
@@ -590,5 +590,293 @@ footer {
     .footer-section h3:after {
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+.about-content {
+    padding: 40px 0; /* Increased padding at top and bottom */
+    background-color: var(--background);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+    margin-bottom: 60px;
+    align-items: start;
+}
+
+.about-text h2 {
+    color: var(--primary-color);
+    margin: 30px 0 20px;
+    font-size: 1.8rem;
+}
+
+.about-text h2:first-child {
+    margin-top: 0;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.about-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    margin-right: 20px;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    min-width: 40px;
+    text-align: center;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.feature-text p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.full-width-section {
+    width: 100%;
+}
+
+/* Update page header */
+.page-header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 70px 0 80px; /* Increased padding for more space */
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    animation: fadeInDown 0.8s ease;
+}
+
+/* Media queries for about page */
+@media screen and (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-header {
+        padding: 120px 0 60px;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-content {
+        padding: 60px 0;
+    }
+    
+    .feature-item {
+        padding: 15px;
+    }
+    
+    .feature-icon {
+        font-size: 1.5rem;
+    }
+}
+
+.circuit-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    height: 400px; /* Set a fixed height */
+}
+
+.circuit-image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+    object-fit: cover;
+}
+
+/* You might want to adjust the grid layout too */
+.circuit-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 50px; /* Add space between items */
+}
+
+/* Make sure mobile views look good too */
+@media screen and (max-width: 992px) {
+    .circuit-image-container {
+        height: 250px; /* Slightly smaller on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .circuit-image-container {
+        height: 200px; /* Even smaller on mobile screens */
+    }
+}
+
+.circuits-intro {
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 2px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--accent-color);
+}
+
+.documents-section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.documents-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.documents-section p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.document-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.document-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    color: var(--text-color);
+}
+
+.document-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    color: var(--accent-color);
+}
+
+.document-link i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+/* Responsive design for document links */
+@media screen and (max-width: 768px) {
+    .document-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .document-link {
+        width: 100%;
+        max-width: 300px;
     }
 }

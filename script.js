@@ -48,4 +48,45 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.backgroundColor = 'var(--primary-color)';
         }
     });
+
+
+
+    
+
+    const circuitImages = document.querySelectorAll('.circuit-image-container');
+    
+    // Create lightbox elements
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    
+    const lightboxImg = document.createElement('img');
+    lightboxImg.className = 'lightbox-img';
+    
+    const closeBtn = document.createElement('span');
+    closeBtn.className = 'lightbox-close';
+    closeBtn.innerHTML = '&times;';
+    
+    // Add elements to DOM
+    lightbox.appendChild(lightboxImg);
+    lightbox.appendChild(closeBtn);
+    document.body.appendChild(lightbox);
+    
+    // Set up click handlers for images
+    circuitImages.forEach(container => {
+        container.addEventListener('click', () => {
+            const img = container.querySelector('img');
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+        });
+    });
+    
+    // Close lightbox when clicking outside the image or on close button
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImg) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
 });
+
