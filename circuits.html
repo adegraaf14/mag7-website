@@ -82,7 +82,7 @@
 
                     <div class="circuit-item">
                         <div class="circuit-image-container">
-                            <img src="images/circuits/ir-sensor-placeholder.jpg" alt="IR Sensor Circuit">
+                            <img src="images/chargeSchematic.png" alt="IR Sensor Circuit">
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <h3>Power System</h3>
@@ -92,62 +92,10 @@
                         </div>
                         <div class="circuit-description">
                             <h3>Power System</h3>
-                            <p>The power system is made up </p>
-                            <p></p>
+                            <p>The system is powered by a 3.7V 5000mAh that is boosted up to 5V to power the Raspberry Pi. The LM3914 IC is used to display the charge level of the LiPo battery. 10 LEDs are used to show the charge level in the battery, each representing a voltage change of 0.12V. The range of this is controlled by a series of voltage dividers connected to our upper and lower voltage limit pins on the IC.</p>
+                            <p>A Schottky diode is used to prevent the backflow of current into the wireless charger. When the cube on the wireless charger, it is charged as the system is powered by the battery. If the battery is removed, normal operation is able to be continued from the wireless charger alone. The battery is capable of powering the system for ~3 hours.</p>
                         </div>
                     </div>
-
-                    <!-- Circuit Item 4 -->
-                    <div class="circuit-item">
-                        <div class="circuit-image-container">
-                            <img src="images/circuits/power-supply-placeholder.jpg" alt="Power Supply Circuit">
-                            <div class="overlay">
-                                <div class="overlay-content">
-                                    <h3>Power Supply System</h3>
-                                    <p>Click to view full-size</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="circuit-description">
-                            <h3>Power Supply System</h3>
-                            <p>Reliable power is critical for our LED cube to function properly. Our power supply system incorporates:</p>
-                            <ul>
-                                <li>5V/3A main power supply for LEDs</li>
-                                <li>3.3V regulated supply for logic circuits</li>
-                                <li>Power filtering and protection circuitry</li>
-                                <li>Capacitive buffering for LED current spikes</li>
-                            </ul>
-                            <p>The power system is designed to handle the varying current demands of the LED matrix during different animation patterns. High-capacity filter capacitors ensure stable operation even when all LEDs are at maximum brightness.</p>
-                        </div>
-                    </div>
-
-                    <!-- Circuit Item 5 -->
-                    <div class="circuit-item">
-                        <div class="circuit-image-container">
-                            <img src="images/circuits/wand-placeholder.jpg" alt="IR Wand Controller">
-                            <div class="overlay">
-                                <div class="overlay-content">
-                                    <h3>IR Wand Controller</h3>
-                                    <p>Click to view full-size</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="circuit-description">
-                            <h3>IR Wand Controller</h3>
-                            <p>The IR wand controller is the user interface for our LED cube. This compact circuit includes:</p>
-                            <ul>
-                                <li>ATtiny85 microcontroller for command generation</li>
-                                <li>IR LED with driver circuit</li>
-                                <li>Motion detection via ADXL345 accelerometer</li>
-                                <li>Button inputs for mode selection</li>
-                                <li>Battery power system with power management</li>
-                            </ul>
-                            <p>The wand translates physical movements and button presses into IR command signals that are sent to the cube. Different gestures trigger different light patterns and effects in the LED matrix.</p>
-                        </div>
-                    </div>
-
-                    <!-- Add more circuit items as needed by copying the structure above -->
-                </div>
 
                 <div class="component-list">
                     <h2>Key Components</h2>
@@ -162,39 +110,44 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Microcontroller</td>
-                                    <td>ARM Cortex-M4, 120MHz, 256KB Flash</td>
+                                    <td>Raspberry Pi 4b</td>
+                                    <td>Quad core Cortex-A72, 4GB LPDDR4-3200 SDRAM</td>
                                     <td>Main control system, LED pattern generation, IR signal processing</td>
                                 </tr>
                                 <tr>
-                                    <td>WS2812B LEDs</td>
-                                    <td>5x5x5 Matrix, 5V operation, 60mA max per LED</td>
-                                    <td>Visual display elements, individually addressable RGB lights</td>
+                                    <td>WWS2812B IC RGB LEDs</td>
+                                    <td>Individual Addressable 5V, 50mA</td>
+                                    <td>Visual display elements</td>
                                 </tr>
                                 <tr>
-                                    <td>TSOP38238</td>
-                                    <td>38kHz IR receiver, 45m range</td>
-                                    <td>Detects and demodulates IR signals from the wand controller</td>
+                                    <td>SC0949 Lens</td>
+                                    <td>12MP, 8MM IR Lens</td>
+                                    <td>Lens mounted on the camera module</td>
                                 </tr>
                                 <tr>
-                                    <td>ATtiny85</td>
-                                    <td>8MHz, 8KB Flash, 512B RAM</td>
-                                    <td>Controls the IR wand, processes accelerometer data</td>
+                                    <td>SC0870 Camera Module</td>
+                                    <td>IR, Raspberry Pi camera</td>
+                                    <td>Camera connected to the Pi with a ribbon cable</td>
                                 </tr>
                                 <tr>
-                                    <td>ADXL345</td>
-                                    <td>3-axis accelerometer, ±16g range</td>
-                                    <td>Motion detection for the IR wand controller</td>
+                                    <td>Pimoroni Zero LiPo Shim</td>
+                                    <td>TPS61232 Step-Up Boost Converter</td>
+                                    <td>Power management module for the Pi</td>
                                 </tr>
                                 <tr>
-                                    <td>Power Regulator</td>
-                                    <td>5V to 3.3V buck converter, 1A output</td>
-                                    <td>Provides stable power for logic circuits</td>
+                                    <td>Taidacent Wireless Charger</td>
+                                    <td>5V 5A High Current 24V DC</td>
+                                    <td>Charges the battery and powers the block</td>
                                 </tr>
                                 <tr>
-                                    <td>Capacitors</td>
-                                    <td>1000μF, 10V electrolytic, various ceramics</td>
-                                    <td>Power filtering and stabilization for LEDs</td>
+                                    <td>IR Longpass Filter</td>
+                                    <td>700nm visible light cut filter</td>
+                                    <td>Removes visible light from passing through to the camera</td>
+                                </tr>
+                                <tr>
+                                    <td>755590 Li-Ion Polymer Battery</td>
+                                    <td>3.7-5V, 5000mAh rechargable battery</td>
+                                    <td>Provides power to the block</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -209,14 +162,14 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>Parker Ackerknecht:</p>
+                    <p>Parker Ackerknecht: parkerack36@gmail.com</p>
                     <p>Alec de Graaf: adegraaf14@gmail.com</p>
-                    <p>Prakash Gurung: </p>
+                    <p>Prakash Gurung: parakashtamu@gmail.com</p>
                 </div>
                 <div class="footer-section">
                     <h3>Follow</h3>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/adegraaf14/capstone"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>

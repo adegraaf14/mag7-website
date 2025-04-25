@@ -880,3 +880,73 @@ footer {
         max-width: 300px;
     }
 }
+
+
+.component-list {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.component-list h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.component-table-container {
+    overflow-x: auto;
+}
+
+.component-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.component-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.component-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.component-table tr:nth-child(even) {
+    background-color: #f5f7fa;
+}
+
+.component-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+.component-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive adjustments for the component table */
+@media screen and (max-width: 768px) {
+    .component-table th,
+    .component-table td {
+        padding: 12px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .component-list {
+        padding: 20px;
+    }
+}
